@@ -31,6 +31,6 @@ sed -i 's/\..*/ /' ping.temp
    fi
  fi
  fi
-done <lista
+done <list.txt
 rm ping.temp
 rm ping2.temp
