@@ -28,9 +28,12 @@ sed -i 's/\..*/ /' ping.temp
     v=$(($s / $j))
 
    echo "$p -- $result  $v ms "  >> servers.txt
+   sort -nr -k 3,3 servers.txt > servers.temp
+   mv servers.temp servers.txt
    fi
  fi
  fi
 done <list.txt
 rm ping.temp
 rm ping2.temp
+rm servers.temp
